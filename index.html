@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title >Nexus</title>
+<link rel="shortcut icon" type="x-icon" href="Images/logok.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <div id="header">
+    <div id="logo">
+     <a href="index.html"><img src="Images/logo2.jpg" alt="this is not existed"></a>
+     <a href="index.html"><h1>Nexus</h1></a>
+    </div>
+<div class="nav">
+  <a href="index.html" target="_blank">Home</a>
+  <a href="smart.html"target="_blank">Smart Watches</a>
+  <a href="airbuds.html" target="_blank">Earbuds</a>
+  <a href="Support.html" target="_blank">Support</a>
+</div>
+
+<div id="login" style="display: flex;">
+  <button type="button" onclick="on()" id="on"><i class="fa-solid fa-user" style="margin: 0px 10px 0px 0px;"></i>Login/ Signup</button>
+</div>
+<div>
+  <button onclick="viewCart()" id="butshop"><i class="fa-solid fa-cart-shopping"  ></i> (<span id="cart-count">0</span>)</button>
+</div>
+  </div>
+  <div id="page1" class="paget">
+    <div class="page">
+        <button type="button" onclick="off()" id="off">&times;</button>
+        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: center; border-bottom: 5px solid purple; padding: 0px 0px 5px 0px; margin: 30px 210px 30px 210px;">Login</h1>
+        
+        <form onsubmit="return validateLogin()" action="index.html" class="strong"> 
+            <label>Username</label>
+            <center><input type="text" id="inputText" placeholder="Enter Name"></center>
+            <p id="moon" style="color: red; margin: 0;"></p>
+
+            <label>Password</label>
+            <center><input type="password" id="cool" placeholder="Enter Password"></center>
+            <p id="loon" style="color: red; margin: 0;"></p>
+
+            <label>
+                <input type="checkbox"> Remember me
+            </label>
+
+            <center><input type="submit" value="Login"></center>
+            <center><a href="REgistration.html" style="text-decoration: none; color: black;" target="_blank">Don't have an account?</a></center>
+        </form>
+    </div>
+</div>
+<div id="cart" class="hidden">
+  <button class="sss" onclick="closeCart()">&times;</button>
+  <h2>Shopping Cart</h2>
+  <p id="empty-message" style="text-align: center; font-size: 18px; color: gray;">
+      Your cart is empty
+  </p>
+  <ul id="cart-items"></ul>
+  <p>Total: Rs <span id="total-price">0</span></p>
+  <a href="Chekout.html" id="checkout-link">
+    <button id="checkout-btn" class="ss">Proceed to Checkout</button>
+  </a>
+  <p id="empty" style="color: red; margin: 0;"></p>
+</div>
+
+
+
+<div class="slideshow-container">
+  <div class="slides">
+    <div class="slide"><img src="Images/von.jpeg" alt="Slide 1"></div>
+    <div class="slide"><img src="Images/von1.avif" alt="Slide 2"></div>
+  </div>
+</div>
+<br>
+
+  <div id="section1">
+ <h1 style="color: rgb(214, 4, 214); margin: 0px 20px 10px 20px; border-bottom: 2px solid white; padding: 0px 0px 20px 0px;">Recently Added</h1>
+ <div style="background-color: grey; padding: 1px; margin: 20px;">
+  <h2 style="color: white;">AirBuds</h2>
+
+  </div>
+
+  <div id="section2" >
+    <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/p1.webp" id="imgb">
+      <div id="imgd"> <a href="Ear Bud 1.html"><img src="head/Image/p1.webp" alt="This is not existed" ></a></div>
+      <hr>
+      <h1><a href="Ear Bud 1.html">Ear Bud 1</a></h1>
+      <h2><a href="Ear Bud 1.html">Rs.3,500</a></h2>
+      <button onclick="addToCart(1, 'Ear Buds 1', 3500, 'head/Image/p1.webp')" id="imbut">Add to Cart</button>
+  </div>
+  <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/p3.webp" id="imgb">
+    <div id="imgd"> <a href="Ear Bud 2.html"><img src="head/Image/p3.webp" alt="This is not existed" ></a></div>
+    <hr>
+    <h1><a href="Ear Bud 2.html">Ear Bud 2</a></h1>
+    <h2><a href="Ear Bud 2.html">Rs.2,400</a></h2>
+    <button onclick="addToCart(2, 'Ear Buds 2', 2400, 'head/Image/p3.webp')" id="imbut">Add to Cart</button>
+  </div>
+  <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/earbuds1.png" id="imgb">
+  <div id="imgd"> <a href="Ear Bud 3.html"><img src="head/Image/earbuds1.png" alt="This is not existed" ></a></div>
+  <hr>
+  <h1><a href="Ear Bud 3.html">Ear Bud 3</a></h1>
+  <h2><a href="Ear Bud 3.html">Rs.1,500</a></h2>
+  <button onclick="addToCart(3, 'Ear Buds 3', 1500, 'head/Image/earbuds1.png')" id="imbut">Add to Cart</button>
+  </div>
+  <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/earbuds2.jpg" id="imgb">
+  <div id="imgd"> <a href="Ear Bud 4.html"><img src="head/Image/earbuds2.jpg" alt="This is not existed" ></a></div>
+  <hr>
+  <h1><a href="Ear Bud 4.html">Ear Bud 4</a></h1>
+  <h2><a href="Ear Bud 4.html">Rs.4,200</a></h2>
+  <button onclick="addToCart(4, 'Ear Buds 4', 4200, 'head/Image/earbuds2.jpg')" id="imbut">Add to Cart</button>
+  </div>
+  </div>
+  </div>
+
+    <div style="background-color: grey; padding: 1px; margin: 20px;">
+      <h2 style="color: white;">Watches</h2>
+    
+      </div>
+    <div id="section2" style="margin: 30px 0px 30px 0px;">
+      <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Watches.jpeg" id="imgb">
+        <div id="imgd"> <a href="Watches1.html"><img src="head/Watches.jpeg" alt="This is not existed" ></a></div>
+        <hr>
+        <h1><a href="Watches1.html">Watches 1</a></h1>
+        <h2><a href="Watches1.html">Rs.1,200</a></h2>
+        <button onclick="addToCart(5, 'Watches 1', 1200, 'head/Watches.jpeg')" id="imbut">Add to Cart</button>
+    </div>
+    <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Watches (8).jpeg" id="imgb">
+      <div id="imgd"> <a href="Watches2.html"><img src="head/Watches (8).jpeg" alt="This is not existed" ></a></div>
+      <hr>
+      <h1><a href="Watches2.html">Watches 2</a></h1>
+      <h2><a href="Watches2.html">Rs.3,500</a></h2>
+      <button onclick="addToCart(6, 'Watches 2', 3500, 'head/Watches (8).jpeg')" id="imbut">Add to Cart</button>
+  </div>
+  <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Watches (3).jpeg" id="imgb">
+    <div id="imgd"> <a href="Watches3.html"><img src="head/Watches (3).jpeg" alt="This is not existed" ></a></div>
+    <hr>
+    <h1><a href="Watches3.html">Watches 3</a></h1>
+    <h2><a href="Watches3.html">Rs.7,100</a></h2>
+    <button onclick="addToCart(7, 'Watches 3', 7100, 'head/Watches (3).jpeg')" id="imbut">Add to Cart</button>
+</div>
+<div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Watches (4).jpeg" id="imgb">
+  <div id="imgd"> <a href="Watches4.html"><img src="head/Watches (4).jpeg" alt="This is not existed" ></a></div>
+  <hr>
+  <h1><a href="Watches4.html">Watches 4</a></h1>
+  <h2><a href="Watches4.html">Rs.2,000</a></h2>
+  <button onclick="addToCart(8, 'Watches 4', 2000, 'head/Watches (4).jpeg')" id="imbut">Add to Cart</button>
+</div>
+  </div>
+  <img src="head/Image/offer.jpg" alt="This is not existed" style="width: 100%;height: 700px;">
+  <div style="background-color: grey; padding: 1px; margin: 20px;">
+    <h2 style="color: white;">Special.Offer</h2>
+  
+    </div>
+  <div id="section2" style="margin: 30px 0px 30px 0px;">
+
+      <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/earbuds5.webp" id="imgb">
+      <div id="imgd"> <a href="Ear Bud 9.html"> <img src="head/Image/earbuds5.webp" alt="This is not existed"></a></div>
+        <hr>
+        <a href="Ear Bud 9.html">
+        <h1>EarBuds offer 1</h1>
+        <div style="display: flex;">
+        <h2 style="text-decoration: line-through red;">Rs.1,200</h2>
+        <h2>Rs.999</h2>
+      </div></a>
+      <button onclick="addToCart(8, 'EarBuds offer 1', 999, 'head/Image/earbuds5.webp')" id="imbut">Add to Cart</button>
+    </div>
+
+    <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Watches(10).webp" id="imgb">
+      <div id="imgd"> <a href="Watches9.html"><img src="head/Watches(10).webp" alt="This is not existed" ></a></div>
+      <hr>
+      <a href="Watches9.html">  <h1>Watches offer 1</h1>
+      <div style="display: flex;">
+        <h2 style="text-decoration: line-through red;">Rs.12,000</h2>
+        <h2>Rs.11,999</h2>
+      </div></a>
+      <button onclick="addToCart(9, 'Watches offer 1', 11999, 'head/Watches(10).webp')" id="imbut">Add to Cart</button>
+    </div>
+
+      <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/l.webp" id="imgb">
+        <div id="imgd"> <a href="Ear Bud 10.html"> <img src="head/Image/l.webp" alt="This is not existed"></a></div>
+          <hr>
+         <a href="Ear Bud 10.html"> <h1>EarBuds offer 2</h1>
+          <div style="display: flex;">
+          <h2 style="text-decoration: line-through red;">Rs.1,200</h2>
+          <h2>Rs.1,000</h2>
+        </div></a>
+        <button onclick="addToCart(10, 'EarBuds offer 2', 1000, 'head/Image/l.webp')" id="imbut">Add to Cart</button>
+      </div>
+
+<div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/boll.webp" id="imgb">
+  <div id="imgd"> <a href="Watches10.html"><img src="head/boll.webp" alt="This is not existed" ></a></div>
+  <hr>
+  <a href="Watches10.html">
+  <h1>Watches offer 2</h1>
+  <div style="display: flex;">
+    <h2 style="text-decoration: line-through red;">Rs.5,000</h2>
+    <h2>Rs.4,999</h2>
+  </div></a>
+  <button onclick="addToCart(11, 'Watches offer 2', 4999, 'head/boll.webp')" id="imbut">Add to Cart</button>
+</div>
+</div>
+  <div id="footer">
+    <hr>
+    <div class="compo">
+   <div class="port"> 
+    <h2>About Us</h2>
+    <p class="p">This our website nexus for buying products online which is very big help that you can buy things anywhere in this country. <a href="About us.html" class="sp">Read More</a></p>
+  </div>
+  <div style="display: flex;">
+  <div class="big" id="core">
+    <h3>Clicks</h3>
+    <a href="index.html">Home</a><br>
+    <a href="Support.html">Support</a><br>
+    <a href="FAQ.html">FAQ</a><br>
+    
+  </div>
+  <div class="big">
+    <h3>Term of use</h3>
+    <a href="Term of use.html">Term of service</a><br>
+    <a href="Disclaimer.html">Disclaimer</a><br>
+    <a href="Privacy Policy.html">Privacy Policy</a><br>
+  </div></div>
+</div>
+<div class="eml">
+ <h4>Email:-</h4><p>Gmail123@gmail.com</p>
+</div>
+<div class="foot" style="display: flex;justify-content: center;">
+  <a href="https://www.facebook.com/login/" target="_blank"><img src="Images/f.jpg" alt="this is not existed" ></a>
+  <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><img src="Images/instagram.jpg" alt="this is not existed" ></a>
+  <a href="https://web.whatsapp.com/" target="_blank"><img src="Images/whatsapp.jpg" alt="this is not existed"></a>
+  <a href="http://www.twitter.com" target="_blank"><img src="Images/x.jpg" alt="this is not existed" ></a>
+</div>
+  <div class="end">
+ <p>   © 2024 Zero Lifestyle. All Rights Reserved. | Nexus</p>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html> 
