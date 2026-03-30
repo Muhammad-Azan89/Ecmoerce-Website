@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us - Nexus</title>
+<link rel="shortcut icon" type="x-icon" href="Images/logok.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+  <div id="header">
+    <div id="logo">
+     <a href="index.html"><img src="Images/logo2.jpg" alt="Nexus Logo"></a>
+     <a href="index.html"><h1>Nexus</h1></a>
+    </div>
+<div class="nav">
+  <a href="index.html">Home</a>
+  <a href="smart.html">Smart Watches</a>
+  <a href="airbuds.html">Earbuds</a>
+  <a href="Support.html">Support</a>
+</div>
+<div id="login">
+  <button type="button" onclick="on()" id="on"><i class="fa-solid fa-user"></i> Login/Signup</button>
+</div>
+<div>
+  <button onclick="viewCart()" id="butshop"><i class="fa-solid fa-cart-shopping"></i> (<span id="cart-count">0</span>)</button>
+</div>
+  </div>
+  <div id="page1" class="paget">
+     
+    <div class="page">
+      <button type="button" onclick="off()" id="off">&times;</button>
+      <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center; border-bottom: 5px solid purple; padding: 0px 0px 5px 0px; margin: 30px 210px 30px 210px;">login</h1>
+      <form onsubmit="return my()" action="index.html" class="strong"> 
+      Username <center><input type="text" id="inputText"  value="" placeholder="Enter Name"></center>
+      <p id="message" style="color: red;  margin: 0;"></p>
+      Password <center><input type="password"  id="cool" value="" placeholder="Enter Password"></center>
+      <p id="cha" style="color: red; margin: 0;"></p>
+    Remember me <input type="checkbox">
+     <center><input type="submit" onclick="see()" value="Login"></center>
+   <center><a href="REgistration.html" style="text-decoration: none; color: black;" target="_blank">Dont have an account?</a></center>
+     </form>
+  </div>
+
+</div>
+<div id="cart" class="hidden">
+  <button class="sss" onclick="closeCart()">&times;</button>
+  <h2>Shopping Cart</h2>
+  <p id="empty-message" style=" text-align: center; font-size: 18px; color: gray;">
+      Your cart is empty
+  </p>
+  <ul id="cart-items"></ul>
+  <p>Total: Rs<span id="total-price">0</span></p>
+  <a href="Chekout.html" id="checkout-link">
+    <button id="checkout-btn" class="ss">Proceed to Checkout</button>
+  </a></div>
+<div class="banner1">
+  <h1> Your Trusted Online Shopping Destination!</h1>
+</div>
+<center>
+<div class="dis">
+    <h2>About Us</h2>
+    <p>Welcome to Nexus, your go-to online store for premium quality products, unbeatable deals, and a seamless shopping experience. We are committed to bringing you the best in smart gadgets, accessories, and lifestyle products at the most competitive prices.</p>
+
+    <h2>1. Our Story</h2>
+    <p>Founded in [Year], Nexus was established with a vision to revolutionize online shopping by offering high-quality products with unmatched convenience. What started as a small initiative has now grown into a platform serving thousands of satisfied customers.</p>
+
+    <h2>2. Our Mission</h2>
+    <p>At Nexus, our mission is to provide our customers with a reliable, affordable, and enjoyable shopping experience. We strive to curate top-quality products and ensure customer satisfaction through excellent service and fast delivery.</p>
+<center>
+    <h2>3. Why Choose Us?</h2>
+      <p> Wide selection of premium products.</p>
+      <p> Secure and easy payment options.</p>
+      <p> Fast and reliable shipping.</p>
+      <p> 24/7 customer support.</p>
+      <p> Hassle-free returns & refunds. </p></center>
+    <h2>4. Customer Satisfaction</h2>
+    <p>We take pride in our commitment to customer satisfaction. Our team works hard to ensure that every purchase meets your expectations. With a growing community of happy customers, Nexus continues to enhance its services and expand its offerings.</p>
+
+    <h2>5. Get in Touch</h2>
+    <p>We would love to hear from you! If you have any queries, feedback, or concerns, feel free to reach out to us at <strong>support@nexus.com</strong>. Follow us on social media for the latest updates and exclusive deals!</p>
+</div>
+</center>
+<div id="footer">
+  <hr>
+  <div class="compo">
+ <div class="port"> 
+  <h2>About Us</h2>
+  <p class="p">This our website nexus for buying products online which is very big help that you can buy things anywhere in this country. <a href="About us.html" class="sp">Read More</a></p>
+</div>
+<div style="display: flex;">
+<div class="big" id="core">
+  <h3>Clicks</h3>
+  <a href="index.html">Home</a><br>
+  <a href="Support.html">Support</a><br>
+  <a href="FAQ.html">FAQ</a><br>
+  
+</div>
+<div class="big">
+  <h3>Term of use</h3>
+  <a href="Term of use.html">Term of service</a><br>
+  <a href="Disclaimer.html">Disclaimer</a><br>
+  <a href="Privacy Policy.html">Privacy Policy</a><br>
+</div></div>
+</div>
+<div class="eml">
+<h4>Email:-</h4><p>123@gmail.com</p>
+</div>
+<div class="foot" style="display: flex;justify-content: center;">
+<a href="https://www.facebook.com/login/" target="_blank"><img src="Images/f.jpg" alt="this is not existed" ></a>
+<a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><img src="Images/instagram.jpg" alt="this is not existed" ></a>
+<a href="https://web.whatsapp.com/" target="_blank"><img src="Images/whatsapp.jpg" alt="this is not existed"></a>
+<a href="http://www.twitter.com" target="_blank"><img src="Images/x.jpg" alt="this is not existed" ></a>
+</div>
+<div class="end">
+<p>   © 2024 Zero Lifestyle. All Rights Reserved. | Nexus</p>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

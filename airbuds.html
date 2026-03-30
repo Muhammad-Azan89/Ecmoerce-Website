@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ear Buds</title>
+<link rel="shortcut icon" type="x-icon" href="Images/logok.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <div id="header">
+    <div id="logo">
+     <a href="index.html"><img src="Images/logo2.jpg" alt="this is not existed"></a>
+     <a href="index.html"><h1>Nexus</h1></a>
+    </div>
+<div class="nav">
+  <a href="index.html" target="_blank">Home</a>
+  <a href="smart.html"target="_blank">Smart Watches</a>
+  <a href="airbuds.html" target="_blank">Earbuds</a>
+  <a href="Support.html" target="_blank">Support</a>
+</div>
+
+<div id="login" style="display: flex;">
+  <button type="button" onclick="on()" id="on"><i class="fa-solid fa-user" style="margin: 0px 10px 0px 0px;"></i>Login/ Signup</button>
+</div>
+<div>
+  <button onclick="viewCart()" id="butshop"><i class="fa-solid fa-cart-shopping"  ></i> (<span id="cart-count">0</span>)</button>
+</div>
+  </div>
+  <div id="page1" class="paget">
+    <div class="page">
+        <button type="button" onclick="off()" id="off">&times;</button>
+        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: center; border-bottom: 5px solid purple; padding: 0px 0px 5px 0px; margin: 30px 210px 30px 210px;">Login</h1>
+        
+        <form onsubmit="return validateLogin()" action="index.html" class="strong"> 
+            <label>Username</label>
+            <center><input type="text" id="inputText" placeholder="Enter Name"></center>
+            <p id="moon" style="color: red; margin: 0;"></p>
+
+            <label>Password</label>
+            <center><input type="password" id="cool" placeholder="Enter Password"></center>
+            <p id="loon" style="color: red; margin: 0;"></p>
+
+            <label>
+                <input type="checkbox"> Remember me
+            </label>
+
+            <center><input type="submit" value="Login"></center>
+            <center><a href="REgistration.html" style="text-decoration: none; color: black;" target="_blank">Don't have an account?</a></center>
+        </form>
+    </div>
+</div>
+<div id="cart" class="hidden">
+  <button class="sss" onclick="closeCart()">&times;</button>
+  <h2>Shopping Cart</h2>
+  <p id="empty-message" style=" text-align: center; font-size: 18px; color: gray;">
+      Your cart is empty
+  </p>
+  <ul id="cart-items"></ul>
+  <p>Total: Rs<span id="total-price">0</span></p>
+  <a href="Chekout.html" id="checkout-link">
+    <button id="checkout-btn" class="ss">Proceed to Checkout</button>
+  </a>
+</div>
+<div class="banner1">
+  <h2 >Ear Buds</h2>
+</div>
+<div id="section1">
+  <div style="background-color: grey; padding: 1px; margin: 20px;">
+   <h2 style="color: white;">EarBuds</h2>
+   </div>
+   <div id="section2" >
+    <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/p1.webp" id="imgb">
+      <div id="imgd"> <a href="Ear Bud 1.html"><img src="head/Image/p1.webp" alt="This is not existed" ></a></div>
+      <hr>
+      <h1><a href="Ear Bud 1.html">Ear Bud 1</a></h1>
+      <h2><a href="Ear Bud 1.html">Rs.3,500</a></h2>
+      <button onclick="addToCart(1, 'Ear Buds 1', 3500, 'head/Image/p1.webp')" id="imbut">Add to Cart</button>
+  </div>
+  <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/p3.webp" id="imgb">
+    <div id="imgd"> <a href="Ear Bud 2.html"><img src="head/Image/p3.webp" alt="This is not existed" ></a></div>
+    <hr>
+    <h1><a href="Ear Bud 2.html">Ear Bud 2</a></h1>
+    <h2><a href="Ear Bud 2.html">Rs.2,400</a></h2>
+    <button onclick="addToCart(2, 'Ear Buds 2', 2400, 'head/Image/p3.webp')" id="imbut">Add to Cart</button>
+  </div>
+  <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/earbuds1.png" id="imgb">
+  <div id="imgd"> <a href="Ear Bud 3.html"><img src="head/Image/earbuds1.png" alt="This is not existed" ></a></div>
+  <hr>
+  <h1><a href="Ear Bud 3.html">Ear Bud 3</a></h1>
+  <h2><a href="Ear Bud 3.html">Rs.1,500</a></h2>
+  <button onclick="addToCart(3, 'Ear Buds 3', 1500, 'head/Image/earbuds1.png')" id="imbut">Add to Cart</button>
+  </div>
+  <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/earbuds2.jpg" id="imgb">
+  <div id="imgd"> <a href="Ear Bud 4.html"><img src="head/Image/earbuds2.jpg" alt="This is not existed" ></a></div>
+  <hr>
+  <h1><a href="Ear Bud 4.html">Ear Bud 4</a></h1>
+  <h2><a href="Ear Bud 4.html">Rs.4,200</a></h2>
+  <button onclick="addToCart(4, 'Ear Buds 4', 4200, 'head/Image/earbuds2.jpg')" id="imbut">Add to Cart</button>
+  </div>
+  </div>
+  <div id="section2" >
+    <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/earbuds3.jpg" id="imgb">
+      <div id="imgd"> <a href="Ear Bud 5.html"><img src="head/Image/earbuds3.jpg" alt="This is not existed" ></a></div>
+      <hr>
+      <h1><a href="Ear Bud 5.html">Ear Bud 5</a></h1>
+      <h2><a href="Ear Bud 5.html">Rs.1,499</a></h2>
+      <button onclick="addToCart(5, 'Ear Buds 1', 1499, 'head/Image/earbuds3.jpg')" id="imbut">Add to Cart</button>
+  </div>
+  <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/earbuds4.jpg" id="imgb">
+    <div id="imgd"> <a href="Ear Bud 6.html"><img src="head/Image/earbuds4.jpg" alt="This is not existed" ></a></div>
+    <hr>
+    <h1><a href="Ear Bud 6.html">Ear Bud 6</a></h1>
+    <h2><a href="Ear Bud 6.html">Rs.2,199</a></h2>
+    <button onclick="addToCart(6, 'Ear Buds 2', 2199, 'head/Image/earbuds4.jpg')" id="imbut">Add to Cart</button>
+  </div>
+  <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/earbuds7.jpg" id="imgb">
+  <div id="imgd"> <a href="Ear Bud 7.html"><img src="head/Image/earbuds7.jpg" alt="This is not existed" ></a></div>
+  <hr>
+  <h1><a href="Ear Bud 7.html">Ear Bud 7</a></h1>
+  <h2><a href="Ear Bud 7.html">Rs.3,499</a></h2>
+  <button onclick="addToCart(7, 'Ear Buds 3', 3499, 'head/Image/earbuds7.jpg')" id="imbut">Add to Cart</button>
+  </div>
+  <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/earbuds8.jpg" id="imgb">
+  <div id="imgd"> <a href="Ear Bud 8.html"><img src="head/Image/earbuds8.jpg" alt="This is not existed" ></a></div>
+  <hr>
+  <h1><a href="Ear Bud 8.html">Ear Bud 8</a></h1>
+  <h2><a href="Ear Bud 8.html">Rs.5,999</a></h2>
+  <button onclick="addToCart(8, 'Ear Buds 4', 5999, 'head/Image/earbuds8.jpg')" id="imbut">Add to Cart</button>
+  </div>
+  </div>
+  
+
+  <div id="footer">
+    <hr>
+    <div class="compo">
+   <div class="port"> 
+    <h2>About Us</h2>
+    <p class="p">This our website nexus for buying products online which is very big help that you can buy things anywhere in this country. <a href="About us.html" class="sp">Read More</a></p>
+  </div>
+  <div style="display: flex;">
+  <div class="big" id="core">
+    <h3>Clicks</h3>
+    <a href="index.html">Home</a><br>
+    <a href="Support.html">Support</a><br>
+    <a href="FAQ.html">FAQ</a><br>
+    
+  </div>
+  <div class="big">
+    <h3>Term of use</h3>
+    <a href="Term of use.html">Term of service</a><br>
+    <a href="Disclaimer.html">Disclaimer</a><br>
+    <a href="Privacy Policy.html">Privacy Policy</a><br>
+  </div></div>
+</div>
+<div class="eml">
+ <h4>Email:-</h4><p>123@gmail.com</p>
+</div>
+<div class="foot" style="display: flex;justify-content: center;">
+  <a href="https://www.facebook.com/login/" target="_blank"><img src="Images/f.jpg" alt="this is not existed" ></a>
+  <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><img src="Images/instagram.jpg" alt="this is not existed" ></a>
+  <a href="https://web.whatsapp.com/" target="_blank"><img src="Images/whatsapp.jpg" alt="this is not existed"></a>
+  <a href="http://www.twitter.com" target="_blank"><img src="Images/x.jpg" alt="this is not existed" ></a>
+</div>
+  <div class="end">
+ <p>   © 2024 Zero Lifestyle. All Rights Reserved. | Nexus</p>
+</div>
+</div>
+    
+    <script src="script.js"></script>
+    
+    </body>
+    </html> 

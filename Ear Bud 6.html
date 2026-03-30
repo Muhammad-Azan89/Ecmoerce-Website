@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title >Ear Bud 6</title>
+<link rel="shortcut icon" type="x-icon" href="Images/logok.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <div id="header">
+    <div id="logo">
+     <a href="index.html"><img src="Images/logo2.jpg" alt="this is not existed"></a>
+     <a href="index.html"><h1>Nexus</h1></a>
+    </div>
+<div class="nav">
+  <a href="index.html" target="_blank">Home</a>
+  <a href="smart.html"target="_blank">Smart Watches</a>
+  <a href="airbuds.html" target="_blank">Earbuds</a>
+  <a href="Support.html" target="_blank">Support</a>
+</div>
+
+<div id="login" style="display: flex;">
+  <button type="button" onclick="on()" id="on"><i class="fa-solid fa-user" style="margin: 0px 10px 0px 0px;"></i>Login/ Signup</button>
+</div>
+<div>
+  <button onclick="viewCart()" id="butshop"><i class="fa-solid fa-cart-shopping"  ></i> (<span id="cart-count">0</span>)</button>
+</div>
+  </div>
+  <div id="page1" class="paget">
+    <div class="page">
+        <button type="button" onclick="off()" id="off">&times;</button>
+        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: center; border-bottom: 5px solid purple; padding: 0px 0px 5px 0px; margin: 30px 210px 30px 210px;">Login</h1>
+        
+        <form onsubmit="return validateLogin()" action="index.html" class="strong"> 
+            <label>Username</label>
+            <center><input type="text" id="inputText" placeholder="Enter Name"></center>
+            <p id="moon" style="color: red; margin: 0;"></p>
+
+            <label>Password</label>
+            <center><input type="password" id="cool" placeholder="Enter Password"></center>
+            <p id="loon" style="color: red; margin: 0;"></p>
+
+            <label>
+                <input type="checkbox"> Remember me
+            </label>
+
+            <center><input type="submit" value="Login"></center>
+            <center><a href="REgistration.html" style="text-decoration: none; color: black;" target="_blank">Don't have an account?</a></center>
+        </form>
+    </div>
+</div>
+<div id="cart" class="hidden">
+  <button class="sss" onclick="closeCart()">&times;</button>
+  <h2>Shopping Cart</h2>
+  <p id="empty-message" style="text-align: center; font-size: 18px; color: gray;">
+      Your cart is empty
+  </p>
+  <ul id="cart-items"></ul>
+  <p>Total: Rs <span id="total-price">0</span></p>
+  <a href="Chekout.html" id="checkout-link">
+    <button id="checkout-btn" class="ss">Proceed to Checkout</button>
+  </a>
+  <p id="empty" style="color: red; margin: 0;"></p>
+</div>
+
+
+<div id="zoom1">
+  <button type="button" onclick="zoo1()" id="buttne" >&times;</button>
+  <div id="zoom2">
+<img src="head/Image/earbuds4.jpg" alt="this is not existed" id="imge">
+  </div>
+</div>
+
+<div class="anchor1">
+  <a href="index.html">Home ></a>
+  <a href="airbuds.html">EarBuds ></a>
+  <a href="Ear Bud 6.html">Ear Bud 6</a>
+</div>
+
+<div class="product1">
+  <img src="head/Image/earbuds4.jpg" alt="this is not existed" id="zoom3" onclick="zoo2()">
+</div>
+ <div class="st1">
+ <div class="product01">
+    <h2>Ear Bud 6</h2>
+    <h2>Rs 2,199</h2>
+    <div class="rating">
+      <span data-value="5" class="star">&#9733;</span>
+      <span data-value="4" class="star">&#9733;</span>
+      <span data-value="3" class="star">&#9733;</span>
+      <span data-value="2" class="star">&#9733;</span>
+      <span data-value="1" class="star">&#9733;</span>
+    </div>
+    <p id="rating-value">Rating: 0</p>
+    
+    <h2>Description</h2>
+    <h3>1. Design & Build Quality</h3>
+     <ol type="1">
+      <li>Compact and lightweight, designed for a comfortable fit. </li>
+      <li>Ergonomic in-ear design with silicone ear tips for noise isolation.</li>
+      <li>Available in multiple colors (Black, White, Blue, etc.).</li>
+      <li>Sweatproof and water-resistant (IPX4/IPX7 rating).</li>
+     </ol>
+     <h3>2. Sound Quality</h3>
+     <ol type="1">
+      <li> High-fidelity audio with deep bass and clear treble. </li>
+      <li>Active Noise Cancellation (ANC) for an immersive experience.</li>
+      <li>Dual microphones for crystal-clear voice calls.</li>
+      <li>Surround sound effect for a rich listening experience. </li>
+     </ol>
+     <h3>3. Connectivity & Compatibility</h3>
+     <ol type="1">
+      <li>Bluetooth 5.3 for stable and fast connections.  </li>
+      <li>Universal compatibility with Android, iOS, and Windows devices.</li>
+      <li>Instant pairing and auto-reconnect feature.</li>
+      <li>Low-latency mode for gaming and video streaming.</li>
+     </ol>
+     <h3>4. Battery & Charging</h3>
+     <ol type="1">
+      <li>✅ Up to 8 hours of playtime on a single charge. </li>
+      <li>Ergonomic in-ear design with silicone ear tips for noise isolation.</li>
+      <li> Type-C fast charging (10-minute charge = 1-hour playback).</li>
+      <li> Wireless charging support (depends on model).</li>
+     </ol>
+     <button onclick="addToCart(6, 'Ear Buds 2', 2199, 'head/Image/earbuds4.jpg')" id="imin">Add to Cart</button>
+ </div>
+</div>
+
+<div id="section1">
+    <div style="background-color: grey; padding: 1px; margin: 20px;">
+     <h2 style="color: white;">AirBuds</h2>
+     </div>
+     <div id="section2" >
+      <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/p1.webp" id="imgb">
+        <div id="imgd"> <a href="Ear Bud 1.html"><img src="head/Image/p1.webp" alt="This is not existed" ></a></div>
+        <hr>
+        <h1><a href="Ear Bud 1.html">Ear Bud 1</a></h1>
+        <h2><a href="Ear Bud 1.html">Rs.3,500</a></h2>
+        <button onclick="addToCart(1, 'Ear Buds 1', 3500, 'head/Image/p1.webp')" id="imbut">Add to Cart</button>
+    </div>
+    <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/p3.webp" id="imgb">
+      <div id="imgd"> <a href="Ear Bud 2.html"><img src="head/Image/p3.webp" alt="This is not existed" ></a></div>
+      <hr>
+      <h1><a href="Ear Bud 2.html">Ear Bud 2</a></h1>
+      <h2><a href="Ear Bud 2.html">Rs.2,400</a></h2>
+      <button onclick="addToCart(2, 'Ear Buds 2', 2400, 'head/Image/p3.webp')" id="imbut">Add to Cart</button>
+    </div>
+    <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/earbuds1.png" id="imgb">
+    <div id="imgd"> <a href="Ear Bud 3.html"><img src="head/Image/earbuds1.png" alt="This is not existed" ></a></div>
+    <hr>
+    <h1><a href="Ear Bud 3.html">Ear Bud 3</a></h1>
+    <h2><a href="Ear Bud 3.html">Rs.1,500</a></h2>
+    <button onclick="addToCart(3, 'Ear Buds 3', 1500, 'head/Image/earbuds1.png')" id="imbut">Add to Cart</button>
+    </div>
+    <div class="product" data-id="1" data-name="Product 1" data-price="20" data-image="head/Image/earbuds2.jpg" id="imgb">
+    <div id="imgd"> <a href="Ear Bud 4.html"><img src="head/Image/earbuds2.jpg" alt="This is not existed" ></a></div>
+    <hr>
+    <h1><a href="Ear Bud 4.html">Ear Bud 4</a></h1>
+    <h2><a href="Ear Bud 4.html">Rs.4,200</a></h2>
+    <button onclick="addToCart(4, 'Ear Buds 4', 4200, 'head/Image/earbuds2.jpg')" id="imbut">Add to Cart</button>
+    </div>
+    </div>
+
+
+    <div id="footer">
+      <hr>
+      <div class="compo">
+     <div class="port"> 
+      <h2>About Us</h2>
+      <p class="p">This our website nexus for buying products online which is very big help that you can buy things anywhere in this country. <a href="About us.html" class="sp">Read More</a></p>
+    </div>
+    <div style="display: flex;">
+    <div class="big" id="core">
+      <h3>Clicks</h3>
+      <a href="index.html">Home</a><br>
+      <a href="Support.html">Support</a><br>
+      <a href="FAQ.html">FAQ</a><br>
+      
+    </div>
+    <div class="big">
+      <h3>Term of use</h3>
+      <a href="Term of use.html">Term of service</a><br>
+      <a href="Disclaimer.html">Disclaimer</a><br>
+      <a href="Privacy Policy.html">Privacy Policy</a><br>
+    </div></div>
+  </div>
+  <div class="eml">
+   <h4>Email:-</h4><p>123@gmail.com</p>
+  </div>
+  <div class="foot" style="display: flex;justify-content: center;">
+    <a href="https://www.facebook.com/login/" target="_blank"><img src="Images/f.jpg" alt="this is not existed" ></a>
+    <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><img src="Images/instagram.jpg" alt="this is not existed" ></a>
+    <a href="https://web.whatsapp.com/" target="_blank"><img src="Images/whatsapp.jpg" alt="this is not existed"></a>
+    <a href="http://www.twitter.com" target="_blank"><img src="Images/x.jpg" alt="this is not existed" ></a>
+  </div>
+    <div class="end">
+   <p>   © 2024 Zero Lifestyle. All Rights Reserved. | Nexus</p>
+  </div>
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html> 
