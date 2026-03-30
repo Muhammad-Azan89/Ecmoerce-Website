@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+
+<style>
+body {
+    background: linear-gradient(135deg, #000000, #1b313b, #4d788a, #00ffff);
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    background-attachment: fixed;
+}
+/* Center logo */
+.for {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 0 0;
+}
+
+/* Center form */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form box */
+.form {
+    border: 1px solid rgb(0, 174, 255);
+    width: 320px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Inputs */
+input[type=text],
+input[type=email] {
+    border: none;
+    border-bottom: 2px solid rgb(43, 43, 255);
+    background: transparent;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Placeholder fix */
+::placeholder {
+    color: #ccc;
+}
+
+/* Button */
+#button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: rgb(0, 174, 255);
+}
+</style>
+</head>
+
+<body>
+
+<div class="for">
+    <img src="Images/logok.png" alt="Logo" height="120">
+</div>
+
+<div class="center">
+<div class="form">
+    <h2>Checkout</h2>
+
+    <form action="Thankyou.html" onsubmit="return validateForm()">
+
+        <h3>Name:</h3>
+        <input type="text" id="name" placeholder="Enter Name">
+        <p id="nameError" style="color:red;"></p>
+
+        <h3>Email:</h3>
+        <input type="email" id="email" placeholder="Enter Email">
+        <p id="emailError" style="color:red;"></p>
+
+        <h3>Address:</h3>
+        <input type="text" id="address" placeholder="Enter street # or location">
+        <p id="addressError" style="color:red;"></p>
+
+        <input type="submit" id="button" value="Continue">
+    </form>
+</div>
+</div>
+
+<script>
+function validateForm() {
+    let valid = true;
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let address = document.getElementById("address").value;
+
+    // Clear errors
+    document.getElementById("nameError").innerText = "";
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("addressError").innerText = "";
+
+    if (name === "") {
+        document.getElementById("nameError").innerText = "Name is required";
+        valid = false;
+    }
+
+    if (email === "") {
+        document.getElementById("emailError").innerText = "Email is required";
+        valid = false;
+    }
+
+    if (address === "") {
+        document.getElementById("addressError").innerText = "Address is required";
+        valid = false;
+    }
+
+    return valid;
+}
+</script>
+
+</body>
+</html>
